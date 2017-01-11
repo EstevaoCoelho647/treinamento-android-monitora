@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrainingAndroid</string>
+    <string name="lbl_username">Usuário</string>
+    <string name="lbl_password">Senha</string>
+    <string name="login">Entrar</string>
+    <string name="Auth">Auth</string>
+
+</resources>
