@@ -3,12 +3,48 @@
 
     <item
         is-multidex="true"
+        jar="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.0_1f0721e7e8f5126c9c32780b9bc8f219b4095ad4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_383c6ccdba419cfdf6e21d9215ea8c23a2b9efbe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/estevao/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
         <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_0583827d2d7ca60e17597deeb57a86cd52b9ad61/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/estevao/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_fa63a396eba290838c4d4f6fab76093319223c9f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/estevao/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_0897a02ecd38e598dd978c09cd292bebcaa684c1/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -25,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="857bbcc5e27df3c8f97687c953b6ba87cba846be">
+        sha1="d1d6ec3d42d7212f73bd966685e99cd8c0c1ff53">
         <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_52fe4558f4834f968867faf5c8e2260f18022564/classes.dex" />
     </item>
     <item
@@ -75,6 +111,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_73660d92cd87ef2ac1bb4d36cc784ea1c2399288/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="00b9120d8efcbdb94395acc94f6145ea9b2289a4">
+        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_39b18fd126ff9cacc9e1e23e596fdf236c1a689e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/estevao/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
         jumboMode="true"
         optimize="true"
@@ -90,51 +144,6 @@
         revision="25.0.1"
         sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
         <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_66324f1d2f9c9ccfe0da13ced52ba97e838a1cc4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.0_fd390c305016e8d1ba90b6f9f8695826c769a0a8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.0_1f0721e7e8f5126c9c32780b9bc8f219b4095ad4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/estevao/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_0897a02ecd38e598dd978c09cd292bebcaa684c1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_73660d92cd87ef2ac1bb4d36cc784ea1c2399288/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="da5f8a66403ffb7bcc4955287838afe6fcdaf93e">
-        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_39b18fd126ff9cacc9e1e23e596fdf236c1a689e/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -171,6 +180,15 @@
         revision="25.0.1"
         sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
         <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.0_c2c6181242045b46e4e7f13fa6bf083be2f90ec4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/home/estevao/AndroidStudioProjects/TrainingAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.0_fd390c305016e8d1ba90b6f9f8695826c769a0a8/classes.dex" />
     </item>
     <item
         is-multidex="true"

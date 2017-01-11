@@ -3,7 +3,8 @@
     <string name="app_name">TrainingAndroid</string>
     <string name="lbl_username">Usuário</string>
     <string name="lbl_password">Senha</string>
-    <string name="login">Entrar</string>
-    <string name="Auth">Auth</string>
+    <string name="login">Basic Auth</string>
+    <string name="Auth">OAuth</string>
+    <string name="txt_required">Por favor insira um valor</string>
 
 </resources>
