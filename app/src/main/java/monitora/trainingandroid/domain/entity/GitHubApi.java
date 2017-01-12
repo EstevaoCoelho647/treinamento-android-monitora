@@ -1,9 +1,5 @@
 package monitora.trainingandroid.domain.entity;
 
-import retrofit2.Call;
-import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import rx.Observable;
@@ -19,9 +15,4 @@ public interface GitHubApi {
     @GET("user")
     Observable<User> basicAuth(@Header("Authorization") String auth);
 
-    Retrofit retrofit = new Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-            .baseUrl(BASE_URL)
-            .build();
 }

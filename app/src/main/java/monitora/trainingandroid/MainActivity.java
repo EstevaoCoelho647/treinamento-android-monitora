@@ -14,7 +14,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.jakewharton.rxbinding.view.RxView;
 import com.jakewharton.rxbinding.widget.RxTextView;
+
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,7 +36,7 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     protected static final String TAG = "MainActivity";
     @BindView(R.id.txt_view_server_status)
@@ -43,11 +47,14 @@ public class MainActivity extends AppCompatActivity {
     protected TextInputLayout mLayoutTxtPassword;
     @BindView(R.id.buttonAuth)
     protected Button buttonOAuth;
-    private SharedPreferences sharedPreferences;
-    private GitHubOAuthApi gitHubOAuthApi;
-    private GitHubStatusApi statusApiImpl;
-    private GitHubApi gitHubApi;
-
+    @Inject
+    protected SharedPreferences sharedPreferences;
+    @Inject
+    protected GitHubOAuthApi gitHubOAuthApi;
+    @Inject
+    protected GitHubStatusApi statusApiImpl;
+    @Inject
+    protected GitHubApi gitHubApi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,15 +62,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
-        bindButtonAuth();
-
-        statusApiImpl = GitHubStatusApi.retrofit.create(GitHubStatusApi.class);
-        gitHubApi = GitHubApi.retrofit.create(GitHubApi.class);
-        gitHubOAuthApi = GitHubOAuthApi.retrofit.create(GitHubOAuthApi.class);
-
+        getMyApplication().getDaggerDiComponent().inject(this);
         bindRxValidation();
-
-        sharedPreferences = getSharedPreferences(getString(R.string.sp_key_file), MODE_PRIVATE);
     }
 
     private void bindRxValidation() {
@@ -77,10 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 .subscribe(text -> {
                     AppUtil.validateRequiredFields(this, mLayoutTxtUsername);
                 });
-    }
 
-    private void bindButtonAuth() {
-        buttonOAuth.setOnClickListener(view -> {
+        RxView.clicks(buttonOAuth).subscribe(aVoid -> {
             final String baseUrl = GitHubOAuthApi.BASE_URL + "authorize";
             final String clientId = getString(R.string.oauth_client_id);
             final String redirectUri = getOAuthRedirectUri();
@@ -151,8 +149,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
         }
-
-
     }
 
     @Override
