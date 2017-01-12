@@ -17,5 +17,6 @@
     <string name="Auth">OAuth</string>
     <string name="txt_required">Please insert a value</string>
     <string name="sp_accessToken">ACCESS_TOKEN</string>
+    <string name="txt_error">Server not responding</string>
 
 </resources>

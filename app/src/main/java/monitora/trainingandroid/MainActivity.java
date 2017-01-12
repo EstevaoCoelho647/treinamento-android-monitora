@@ -10,15 +10,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.IOException;
+import com.jakewharton.rxbinding.widget.RxTextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,10 +26,11 @@ import monitora.trainingandroid.domain.entity.GitHubStatusApi;
 import monitora.trainingandroid.domain.entity.Status;
 import monitora.trainingandroid.domain.entity.User;
 import monitora.trainingandroid.util.AppUtil;
+import monitora.trainingandroid.util.MySubscriber;
 import okhttp3.Credentials;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,7 +61,22 @@ public class MainActivity extends AppCompatActivity {
         gitHubApi = GitHubApi.retrofit.create(GitHubApi.class);
         gitHubOAuthApi = GitHubOAuthApi.retrofit.create(GitHubOAuthApi.class);
 
+        bindRxValidation();
+
         sharedPreferences = getSharedPreferences(getString(R.string.sp_key_file), MODE_PRIVATE);
+    }
+
+    private void bindRxValidation() {
+        RxTextView.textChanges(mLayoutTxtPassword.getEditText())
+                .skip(1)
+                .subscribe(text -> {
+                    AppUtil.validateRequiredFields(this, mLayoutTxtPassword);
+                });
+        RxTextView.textChanges(mLayoutTxtUsername.getEditText())
+                .skip(1)
+                .subscribe(text -> {
+                    AppUtil.validateRequiredFields(this, mLayoutTxtUsername);
+                });
     }
 
     private void bindButtonAuth() {
@@ -84,33 +96,25 @@ public class MainActivity extends AppCompatActivity {
         if (uri != null && uri.toString().startsWith(this.getOAuthRedirectUri())) {
             String code = uri.getQueryParameter("code");
             if (code != null) {
-                //TODO Pegar o access token (Client ID, Client Secret e Code)
                 String clientId = getString(R.string.oauth_client_id);
                 String clientIdSecret = getString(R.string.oauth_client_secret);
-                gitHubOAuthApi.accessToken(clientId, clientIdSecret, code).enqueue(new Callback<AccessToken>() {
-                    @Override
-                    public void onResponse(Call<AccessToken> call, Response<AccessToken> response) {
-                        if (response.isSuccessful()) {
-                            AccessToken accessToken = response.body();
-                            sharedPreferences.edit()
-                                    .putString(getString(R.string.sp_accessToken), accessToken.getAuthCredential())
-                                    .apply();
-                            Snackbar.make(buttonOAuth, accessToken.access_token, Snackbar.LENGTH_SHORT).show();
-                        } else {
-                            try {
-                                String error = response.errorBody().string();
-                                Snackbar.make(buttonOAuth, error, Snackbar.LENGTH_SHORT).show();
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                gitHubOAuthApi.accessToken(clientId, clientIdSecret, code)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(new MySubscriber<AccessToken>() {
+                            @Override
+                            public void onError(String message) {
+                                Snackbar.make(buttonOAuth, message, Snackbar.LENGTH_SHORT).show();
                             }
-                        }
-                    }
 
-                    @Override
-                    public void onFailure(Call<AccessToken> call, Throwable t) {
-
-                    }
-                });
+                            @Override
+                            public void onNext(AccessToken accessToken) {
+                                sharedPreferences.edit()
+                                        .putString(getString(R.string.sp_accessToken), accessToken.getAuthCredential())
+                                        .apply();
+                                Snackbar.make(buttonOAuth, accessToken.access_token, Snackbar.LENGTH_SHORT).show();
+                            }
+                        });
             } else if (uri.getQueryParameter("error") != null) {
                 //TODO Tratar erro
             }
@@ -128,97 +132,53 @@ public class MainActivity extends AppCompatActivity {
         boolean can = AppUtil.validateRequiredFields(MainActivity.this, mLayoutTxtUsername, mLayoutTxtPassword);
         if (can) {
             final String credential = Credentials.basic(mLayoutTxtUsername.getEditText().getText().toString(), mLayoutTxtPassword.getEditText().getText().toString());
-            gitHubApi.basicAuth(credential).enqueue(new Callback<User>() {
-                @Override
-                public void onResponse(Call<User> call, Response<User> response) {
-                    if (response.isSuccessful()) {
-                        Log.i(TAG, response.body().getLogin());
-                        sharedPreferences.edit()
-                                .putString(getString(R.string.sp_credential_key), credential)
-                                .apply();
-                        Snackbar.make(view, response.body().getLogin(), Snackbar.LENGTH_SHORT).show();
-                    } else {
-                        Log.i(TAG, "Error of server");
-                        Snackbar.make(view, "Requisition error", Snackbar.LENGTH_SHORT).show();
-                    }
-                }
+            gitHubApi.basicAuth(credential).subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(new MySubscriber<User>() {
+                        @Override
+                        public void onError(String e) {
+                            Snackbar.make(view, "Requisition error", Snackbar.LENGTH_SHORT).show();
+                            Log.i(TAG, e);
+                        }
 
-                @Override
-                public void onFailure(Call<User> call, Throwable t) {
-                    Snackbar.make(view, "Requisition error", Snackbar.LENGTH_SHORT).show();
-                    Log.i(TAG, t.getMessage());
-                }
-            });
+                        @Override
+                        public void onNext(User user) {
+                            Log.i(TAG, user.getLogin());
+                            sharedPreferences.edit()
+                                    .putString(getString(R.string.sp_credential_key), credential)
+                                    .apply();
+                            Snackbar.make(view, user.getLogin(), Snackbar.LENGTH_SHORT).show();
+                        }
+                    });
         }
 
-        mLayoutTxtPassword.getEditText().addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                mLayoutTxtPassword.setErrorEnabled(false);
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-        mLayoutTxtUsername.getEditText().addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                mLayoutTxtUsername.setErrorEnabled(false);
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        changeColorItens(Status.Type.NONE.getName(), Status.Type.NONE.getColor());
-        statusApiImpl.lastMessage().enqueue(new Callback<Status>() {
-            @Override
-            public void onResponse(Call<Status> call, Response<Status> response) {
-                Log.i(TAG, "Success on request last message");
-                if (response.isSuccessful()) {
-                    Status status = response.body();
-                    changeColorItens(status.getType().getName(), status.getType().getColor());
-                } else {
-                    try {
-                        String string = response.errorBody().string();
-                        changeColorItens(string, Status.Type.MINOR.getColor());
-                        Toast.makeText(MainActivity.this, string, Toast.LENGTH_SHORT).show();
-                    } catch (IOException e) {
-                        Log.i(TAG, e.getMessage());
+        changeColorItens(Status.Type.NONE);
+        statusApiImpl.lastMessage()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new MySubscriber<Status>() {
+                    @Override
+                    public void onError(String e) {
+                        changeColorItens(Status.Type.MINOR);
                     }
-                }
-            }
 
-            @Override
-            public void onFailure(Call<Status> call, Throwable t) {
-                Log.i("MainActivity", "Error on request last message");
-                changeColorItens("Error", Status.Type.MINOR.getColor());
-            }
-        });
+                    @Override
+                    public void onNext(Status status) {
+                        changeColorItens(Status.Type.GOOD);
+                    }
+                });
         processOAuthRedirectUri();
     }
 
-    private void changeColorItens(String name, int color) {
-        txtViewServerStatus.setText(name);
-        txtViewServerStatus.setTextColor(color);
+    private void changeColorItens(Status.Type type) {
+        txtViewServerStatus.setText(type.getName());
+        txtViewServerStatus.setTextColor(type.getColor());
     }
 
 }
