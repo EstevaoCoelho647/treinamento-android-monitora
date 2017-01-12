@@ -12,26 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c07454a3-2962-461c-bc9f-4ce3255c932f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/adapter_rxjava_2_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxandroid_1_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxbinding_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxjava_1_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/util/MySubscriber.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/domain/entity/GitHubApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/domain/entity/GitHubApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/domain/entity/GitHubOAuthApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/domain/entity/GitHubOAuthApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/domain/entity/GitHubStatusApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/domain/entity/GitHubStatusApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-pt-rBR/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-pt-rBR/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="TrainingAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,18 +48,18 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="59" column="73" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
+            <state relative-caret-position="273">
+              <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3691#3726#0" expanded="true" />
-                <element signature="e#3768#3807#0" expanded="true" />
-                <element signature="e#4528#4562#0" expanded="true" />
-                <element signature="e#6272#6309#0" expanded="true" />
-                <element signature="e#6927#6928#0" expanded="true" />
-                <element signature="e#7010#7011#0" expanded="true" />
-                <element signature="e#7097#7098#0" expanded="true" />
-                <element signature="e#7179#7180#0" expanded="true" />
+                <element signature="e#3764#3799#0" expanded="true" />
+                <element signature="e#3841#3880#0" expanded="true" />
+                <element signature="e#4601#4635#0" expanded="true" />
+                <element signature="e#6345#6382#0" expanded="true" />
+                <element signature="e#7000#7001#0" expanded="true" />
+                <element signature="e#7083#7084#0" expanded="true" />
+                <element signature="e#7170#7171#0" expanded="true" />
+                <element signature="e#7252#7253#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2416,9 +2397,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34285715" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -2476,14 +2457,14 @@
           <caret line="90" column="36" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3691#3726#0" expanded="true" />
-            <element signature="e#3768#3807#0" expanded="true" />
-            <element signature="e#4528#4562#0" expanded="true" />
-            <element signature="e#6272#6309#0" expanded="true" />
-            <element signature="e#6927#6928#0" expanded="true" />
-            <element signature="e#7010#7011#0" expanded="true" />
-            <element signature="e#7097#7098#0" expanded="true" />
-            <element signature="e#7179#7180#0" expanded="true" />
+            <element signature="e#3764#3799#0" expanded="true" />
+            <element signature="e#3841#3880#0" expanded="true" />
+            <element signature="e#4601#4635#0" expanded="true" />
+            <element signature="e#6345#6382#0" expanded="true" />
+            <element signature="e#7000#7001#0" expanded="true" />
+            <element signature="e#7083#7084#0" expanded="true" />
+            <element signature="e#7170#7171#0" expanded="true" />
+            <element signature="e#7252#7253#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2541,14 +2522,14 @@
           <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3691#3726#0" expanded="true" />
-            <element signature="e#3768#3807#0" expanded="true" />
-            <element signature="e#4528#4562#0" expanded="true" />
-            <element signature="e#6272#6309#0" expanded="true" />
-            <element signature="e#6927#6928#0" expanded="true" />
-            <element signature="e#7010#7011#0" expanded="true" />
-            <element signature="e#7097#7098#0" expanded="true" />
-            <element signature="e#7179#7180#0" expanded="true" />
+            <element signature="e#3764#3799#0" expanded="true" />
+            <element signature="e#3841#3880#0" expanded="true" />
+            <element signature="e#4601#4635#0" expanded="true" />
+            <element signature="e#6345#6382#0" expanded="true" />
+            <element signature="e#7000#7001#0" expanded="true" />
+            <element signature="e#7083#7084#0" expanded="true" />
+            <element signature="e#7170#7171#0" expanded="true" />
+            <element signature="e#7252#7253#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2633,14 +2614,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3691#3726#0" expanded="true" />
-            <element signature="e#3768#3807#0" expanded="true" />
-            <element signature="e#4528#4562#0" expanded="true" />
-            <element signature="e#6272#6309#0" expanded="true" />
-            <element signature="e#6927#6928#0" expanded="true" />
-            <element signature="e#7010#7011#0" expanded="true" />
-            <element signature="e#7097#7098#0" expanded="true" />
-            <element signature="e#7179#7180#0" expanded="true" />
+            <element signature="e#3764#3799#0" expanded="true" />
+            <element signature="e#3841#3880#0" expanded="true" />
+            <element signature="e#4601#4635#0" expanded="true" />
+            <element signature="e#6345#6382#0" expanded="true" />
+            <element signature="e#7000#7001#0" expanded="true" />
+            <element signature="e#7083#7084#0" expanded="true" />
+            <element signature="e#7170#7171#0" expanded="true" />
+            <element signature="e#7252#7253#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2921,18 +2902,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/monitora/trainingandroid/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="59" column="73" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
+        <state relative-caret-position="273">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3691#3726#0" expanded="true" />
-            <element signature="e#3768#3807#0" expanded="true" />
-            <element signature="e#4528#4562#0" expanded="true" />
-            <element signature="e#6272#6309#0" expanded="true" />
-            <element signature="e#6927#6928#0" expanded="true" />
-            <element signature="e#7010#7011#0" expanded="true" />
-            <element signature="e#7097#7098#0" expanded="true" />
-            <element signature="e#7179#7180#0" expanded="true" />
+            <element signature="e#3764#3799#0" expanded="true" />
+            <element signature="e#3841#3880#0" expanded="true" />
+            <element signature="e#4601#4635#0" expanded="true" />
+            <element signature="e#6345#6382#0" expanded="true" />
+            <element signature="e#7000#7001#0" expanded="true" />
+            <element signature="e#7083#7084#0" expanded="true" />
+            <element signature="e#7170#7171#0" expanded="true" />
+            <element signature="e#7252#7253#0" expanded="true" />
           </folding>
         </state>
       </provider>
