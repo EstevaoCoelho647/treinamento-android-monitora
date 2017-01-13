@@ -1,7 +1,6 @@
-package monitora.trainingandroid.util;
+package monitora.trainingandroid.presentation.helper;
 
 import android.content.Context;
-import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.text.TextUtils;
 import android.widget.EditText;
@@ -12,23 +11,29 @@ import monitora.trainingandroid.R;
  * Created by estevao on 11/01/17.
  */
 
-public final class AppUtil {
+public final class AppHelper {
 
-    public static boolean validateRequiredFields(Context context, TextInputLayout... fields) {
+    private final Context mContext;
+
+    public AppHelper(Context context) {
+        mContext = context;
+    }
+
+    public boolean validateRequiredFields(TextInputLayout... fields) {
         boolean isValid = true;
         for (TextInputLayout f :
                 fields) {
-            if (f.getEditText() != null){
+            if (f.getEditText() != null) {
                 EditText editText = f.getEditText();
-                if (TextUtils.isEmpty(editText.getText())){
+                if (TextUtils.isEmpty(editText.getText())) {
                     f.setErrorEnabled(true);
-                    f.setError(context.getString(R.string.txt_required));
+                    f.setError(mContext.getString(R.string.txt_required));
                     isValid = false;
-                }else {
+                } else {
                     f.setErrorEnabled(false);
                     f.setError(null);
                 }
-            }else
+            } else
                 throw new RuntimeException("O TextInputLayout deve possuir um editText");
         }
 

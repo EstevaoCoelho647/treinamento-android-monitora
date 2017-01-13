@@ -2,9 +2,11 @@ package monitora.trainingandroid;
 
 import android.app.Application;
 
+import monitora.trainingandroid.dagger.DaggerDiComponent;
+import monitora.trainingandroid.dagger.DiComponent;
+import monitora.trainingandroid.dagger.UiComponent;
 import monitora.trainingandroid.dagger.module.ApplicationModule;
-import monitora.trainingandroid.dagger.module.DaggerDiComponent;
-import monitora.trainingandroid.dagger.module.DiComponent;
+
 
 /**
  * Created by estevao on 12/01/17.
@@ -22,7 +24,7 @@ public class MyApplication extends Application {
                 .build();
     }
 
-    public DiComponent getDaggerDiComponent() {
-        return mDiComponent;
+    public UiComponent getDaggerUiComponent() {
+        return mDiComponent.uiComponent();
     }
 }

@@ -1,5 +1,6 @@
-package monitora.trainingandroid.domain.entity;
+package monitora.trainingandroid.infraestructure.storage.service;
 
+import monitora.trainingandroid.domain.entity.AccessToken;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Headers;
@@ -10,7 +11,7 @@ import rx.Observable;
  * Created by estevao on 11/01/17.
  */
 
-public interface GitHubOAuthApi {
+public interface GitHubOAuthService {
     String BASE_URL = "https://github.com/login/oauth/";
 
     @Headers({"Accept: application/json"})
